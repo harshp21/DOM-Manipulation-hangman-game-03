@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #fff;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("hangman-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.hangman-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  height: 100%;
+}
+
+.hangman-title-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 0px 0px 0px;
+}
+
+.alphabet-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  display: none;
+}
+
+.alphabet-select-title {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 0px 30px 0px;
+}
+
+.hangman-canvas-container {
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.alphabet-select-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 35px 0px 20px 0px;
+}
+
+.alphabet-btn {
+  width: 40px;
+  height: 45px;
+  background: #fff;
+  color: #c1d72e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 25px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: solid 1px #fff;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.alphabet-btn:hover,
+.hangman-start-btn:hover {
+  background: #c1d72e;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.hangman-lives-display {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 15px;
+  display: none;
+}
+
+.alphabet-guess-word-container {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  display: none;
+}
+
+.alphabet-guess-word {
+  margin: 0px 10px 0px 10px;
+  font-size: 60px;
+}
+
+.hangman-canvas {
+  height: 60%;
+  width: 60%;
+}
+
+.alphabet-visited {
+  opacity: 0.4;
+  cursor: "blocked";
+}
+
+.hangman-start-btn {
+  background: white;
+  color: #4b4747;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  grid-column: 1/3;
+  width: 250px;
+  height: 125px;
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+.hangman-start-conatiner {
+  display: grid;
+  width: 80%;
+  color: black;
+  border-radius: 5px;
+  margin: 0px auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.home-page-hangman-canvas {
+  width: 400px;
+  height: 200px;
+  padding: 45px;
+  padding-top: 30px;
+}
+
+.hangman-start-page-msg {
+  display: flex;
+  margin: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  padding: 20px 40px 20px 40px;
+  flex-direction: column;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.canvas-wrapper-div {
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  grid-column: 1/2;
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
